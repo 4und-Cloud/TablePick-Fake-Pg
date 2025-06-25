@@ -25,8 +25,8 @@ public class FakePgController {
     // 실제 PG사는 미리 설정된 가맹점 콜백 URL을 사용하지만,
     // 여기서는 테스트를 위해 요청 시 콜백 URL을 받도록 합니다.
     // 실제 PG사에서는 이 URL이 고정되어 있고, 우리 서버는 그 고정된 URL을 PG사에 등록합니다.
-    private static final String SUCCESS_CALLBACK_URL = "http://localhost:8080/api/payments/pg-callback/success"; // 결제 도메인의 콜백 URL
-    private static final String FAIL_CALLBACK_URL = "http://localhost:8080/api/payments/pg-callback/fail"; // 결제 도메인의 콜백 URL
+    private static final String SUCCESS_CALLBACK_URL = "http://localhost:8082/api/payments/pg-callback/success"; // 결제 도메인의 콜백 URL
+    private static final String FAIL_CALLBACK_URL = "http://localhost:8082/api/payments/pg-callback/fail"; // 결제 도메인의 콜백 URL
 
     @PostMapping("/approve")
     public ResponseEntity<PgApproveResponseDto> approvePayment(@RequestBody PgApproveRequestDto request) {
